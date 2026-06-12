@@ -18,20 +18,42 @@
       background: linear-gradient(90deg, #004aad, #0077ff);
       color: white;
       padding: 15px 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand img.logo {
+      height: 40px;
+      width: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .brand span {
+      font-weight: 600;
+      font-size: 18px;
+      color: white;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
     nav a {
       color: white;
-      margin: 0 10px;
       text-decoration: none;
       font-weight: 500;
+      transition: color 0.3s ease;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #00c6ff;
     }
     .hero-banner {
       background: linear-gradient(135deg, #0077ff, #00c6ff);
@@ -117,6 +139,20 @@
     .dark .app-highlight img.app-icon {
       box-shadow: 0 3px 8px rgba(255,255,255,0.2);
     }
+    .toggle-btn {
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: none;
+      background: linear-gradient(135deg, #2563eb, #00c6ff);
+      color: white;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .toggle-btn:hover {
+      background: linear-gradient(135deg, #1d4ed8, #0099ff);
+      transform: scale(1.05);
+    }
   </style>
 </head>
 
@@ -124,10 +160,11 @@
 
 <header>
   <nav>
-    <div style="display:flex; align-items:center; gap:10px;">
-      <strong>Unnatel Technologies</strong>
+    <div class="brand">
+      <img src="assets/images/logounnatel.png" alt="Unnatel Logo" class="logo">
+      <span>Unnatel Technologies</span>
     </div>
-    <div>
+    <div class="nav-links">
       <button class="toggle-btn" onclick="toggleDark()">Dark Mode</button>
       <a href="index.html">Home</a>
       <a href="apps.html">Apps</a>
