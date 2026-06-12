@@ -86,14 +86,18 @@ nav a:hover{color:#00c6ff}
   margin-bottom:15px;
 }
 
-.app-highlight img.app-icon{
-  width:70px;
-  height:70px;
-  border-radius:12px;
-  object-fit:cover;
-  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+/* ✅ FIXED IMAGE UNIFORM SIZE */
+.app-header img{
+  width:72px;
+  height:72px;
+  border-radius:14px;
+  object-fit:contain;   /* IMPORTANT (no stretching) */
+  background:#f1f5ff;   /* gives clean logo frame */
+  padding:6px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.12);
 }
 
+/* TITLE */
 .app-title h2{
   margin:0;
   color:#004aad;
