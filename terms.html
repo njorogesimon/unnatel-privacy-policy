@@ -4,11 +4,24 @@
 <meta charset="utf-8" />
 <title>UNNASCAN Terms, Conditions & Privacy Policy</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <style>
 :root{
---max-width:980px;--bg:#f5f6f8;--card:#ffffff;--shadow:0 8px 30px rgba(13,27,42,.08);
+--max-width:980px;
+--bg:#f5f6f8;
+--card:#ffffff;
+--shadow:0 8px 30px rgba(13,27,42,.08);
 }
-body{margin:0;font-family:'Segoe UI',Tahoma,Verdana,sans-serif;background:var(--bg);color:#111827;line-height:1.6}
+
+body{
+margin:0;
+font-family:'Segoe UI',Tahoma,Verdana,sans-serif;
+background:var(--bg);
+color:#111827;
+line-height:1.6;
+}
+
+/* HEADER */
 header{
 background:linear-gradient(90deg,#0d1b2a,#1b263b);
 color:#fff;
@@ -16,13 +29,13 @@ padding:20px 40px;
 box-shadow:0 2px 10px rgba(0,0,0,.2);
 position:sticky;
 top:0;
-z-index:40
+z-index:40;
 }
 
 nav{
 display:flex;
 justify-content:space-between;
-align-items:center
+align-items:center;
 }
 
 nav a{
@@ -30,11 +43,11 @@ color:#fff;
 text-decoration:none;
 margin-left:20px;
 font-weight:500;
-transition:color .3s ease
+transition:color .3s ease;
 }
 
 nav a:hover{
-color:#00c6ff
+color:#00c6ff;
 }
 
 .toggle-btn{
@@ -45,31 +58,122 @@ border:none;
 background:linear-gradient(135deg,#2563eb,#00c6ff);
 color:#fff;
 font-weight:bold;
-transition:background .3s ease,transform .2s ease
+transition:background .3s ease,transform .2s ease;
 }
 
 .toggle-btn:hover{
 background:linear-gradient(135deg,#1d4ed8,#0099ff);
-transform:scale(1.05)
+transform:scale(1.05);
 }
-.wrap{max-width:980px;margin:36px auto;padding:0 20px 80px}
-.hero,.policy-main,.toc{background:#fff;border-radius:12px;box-shadow:var(--shadow)}
-.hero{padding:36px}
-.policy{margin-top:28px;display:grid;grid-template-columns:1fr 320px;gap:24px}
-.policy-main{padding:26px}
-.policy-side{position:sticky;top:96px}
-.toc{padding:18px}
-.toc a{color:#0077ff;text-decoration:none}
-.section{margin-bottom:18px;border:1px solid #eee;border-radius:10px}
-.section summary{cursor:pointer;padding:14px 18px;font-weight:700}
-.section .content{padding:0 18px 18px}
-body.dark{background:#071025;color:#e6eefc}
-body.dark .hero,body.dark .policy-main,body.dark .toc{background:#0b1220;color:#e6eefc}
-body.dark header{background:linear-gradient(90deg,#020617,#071025)}
-@media(max-width:980px){.policy{grid-template-columns:1fr}.policy-side{position:static}}
+
+/* LAYOUT */
+.wrap{
+max-width:980px;
+margin:36px auto;
+padding:0 20px 80px;
+}
+
+.hero,.policy-main,.toc{
+background:#fff;
+border-radius:12px;
+box-shadow:var(--shadow);
+}
+
+.hero{
+padding:36px;
+}
+
+/* GRID */
+.policy{
+margin-top:28px;
+display:grid;
+grid-template-columns:1fr 320px;
+gap:24px;
+}
+
+/* MAIN CONTENT */
+.policy-main{
+padding:26px;
+}
+
+/* FIXED SIDEBAR (IMPORTANT FIX) */
+.policy-side{
+position:fixed;
+top:120px;
+right:calc((100% - 980px)/2);
+width:320px;
+}
+
+/* TOC */
+.toc{
+padding:18px;
+max-height:75vh;
+overflow:auto;
+}
+
+.toc a{
+color:#0077ff;
+text-decoration:none;
+}
+
+.section{
+margin-bottom:18px;
+border:1px solid #eee;
+border-radius:10px;
+}
+
+.section summary{
+cursor:pointer;
+padding:14px 18px;
+font-weight:700;
+}
+
+.section .content{
+padding:0 18px 18px;
+}
+
+/* DARK MODE */
+body.dark{
+background:#071025;
+color:#e6eefc;
+}
+
+body.dark .hero,
+body.dark .policy-main,
+body.dark .toc{
+background:#0b1220;
+color:#e6eefc;
+}
+
+body.dark header{
+background:linear-gradient(90deg,#020617,#071025);
+}
+
+/* RESPONSIVE */
+@media(max-width:980px){
+.policy{
+grid-template-columns:1fr;
+}
+
+.policy-side{
+position:static;
+width:auto;
+}
+
+}
+
+/* PREVENT OVERLAP WITH FIXED SIDEBAR */
+@media(min-width:981px){
+.policy-main{
+margin-right:340px;
+}
+}
+
 </style>
 </head>
+
 <body>
+
 <header>
   <nav>
     <div style="display:flex; align-items:center; gap:10px;">
@@ -91,95 +195,80 @@ body.dark header{background:linear-gradient(90deg,#020617,#071025)}
 </header>
 
 <main class="wrap">
+
 <section class="hero">
 <h2 id="overview">UNNASCAN TERMS, CONDITIONS & PRIVACY POLICY</h2>
 <p><strong>Effective Date:</strong> 20th May, 2026</p>
 </section>
 
 <div class="policy">
+
+<!-- MAIN -->
 <div class="policy-main">
 
 <details class="section" id="intro" open>
 <summary>Introduction</summary>
 <div class="content">
-<p>Welcome to Unnascan. By installing, accessing, or using the Unnascan application, you agree to comply with and be bound by these Terms, Conditions, and Privacy Policy. If you do not agree with any part of these terms, you should not use the application.</p>
+<p>Welcome to Unnascan. By installing, accessing, or using the Unnascan application, you agree to comply with these Terms and Privacy Policy.</p>
 </div>
 </details>
 
 <details class="section" id="payment">
 <summary>1. Payment Processing</summary>
 <div class="content">
-<p>All payments made through Unnascan are processed through our secure payment system.</p>
-<p>A processing fee of Kshs 2 applies to each transaction and is included in the total amount payable.</p>
-<p>To verify ownership of mobile numbers, Unnascan may initiate a <strong>KShs 1 M-Pesa STK Push</strong> during phone number registration, phone number verification, QR code creation, or QR code activation.</p>
+<p>All payments are processed securely. A Kshs 2 fee applies per transaction.</p>
 </div>
 </details>
 
-<details class="section" id="reversal"><summary>2. Safaricom Reversal Policy</summary><div class="content"><p>In the event of overpayments or erroneous transactions, reversals shall be handled according to Safaricom’s official reversal procedures.</p><p>Unnascan shall not be held responsible for delays, disputes, failed reversals, or outcomes arising from Safaricom’s reversal process.</p></div></details>
-
-<details class="section" id="acceptance"><summary>3. User Acceptance and Eligibility</summary><div class="content"><p>Installation and continued use of the application is conditional upon your acceptance of these Terms and Conditions.</p><p>Even if you initially use the application as a client, your acceptance of these terms also applies to any merchant features you may use in the future.</p><p>By tapping “I Agree”, you confirm that you have read, understood, and accepted these terms fully.</p></div></details>
-
-<details class="section" id="collection"><summary>4. Collection of Information</summary><div class="content"><ul><li>Phone numbers (payer and recipient)</li><li>Transaction details including amounts, reference numbers, and timestamps</li><li>Account identifiers such as AccountRef</li><li>Device and usage information for security and analytics purposes</li></ul></div></details>
-
-<details class="section" id="use"><summary>5. Use of Information</summary><div class="content"><ul><li>Process and verify payments</li><li>Facilitate transactions through mobile money services such as M-Pesa</li><li>Prevent fraud and unauthorized activity</li><li>Improve system functionality and user experience</li><li>Comply with legal and regulatory obligations</li></ul></div></details>
-
-<details class="section" id="sharing"><summary>6. Sharing of Information</summary><div class="content"><p>We may share your information with payment providers such as Safaricom (M-Pesa), regulators where required by law, and trusted service providers. We do not sell your personal data.</p></div></details>
-
-<details class="section" id="security"><summary>7. Data Security</summary><div class="content"><ul><li>Secure servers and encrypted connections (HTTPS)</li><li>Access controls and authentication</li><li>Monitoring and logging of system access</li></ul></div></details>
-
-<details class="section" id="retention"><summary>8. Data Retention</summary><div class="content"><p>We retain personal data only for as long as necessary to fulfill the purposes outlined in this policy, comply with legal obligations, resolve disputes and enforce agreements.</p></div></details>
-
-<details class="section" id="rights"><summary>9. Your Rights</summary><div class="content"><p>Under the Kenya Data Protection Act, 2019, you may access, correct, delete, or object to processing of your personal data. Contact: unnatel2021@gmail.com</p></div></details>
-
-<details class="section" id="cookies"><summary>10. Cookies and Tracking</summary><div class="content"><p>Unnascan may use cookies or similar technologies to improve user experience, analytics, and system performance.</p></div></details>
-
-<details class="section" id="indemnity"><summary>11. Indemnity</summary><div class="content"><p>You agree to indemnify and hold Unnascan harmless from claims, losses, damages, liabilities, or expenses arising from violation of these terms or failure to comply with Safaricom’s reversal policies.</p></div></details>
-
-<details class="section" id="amendments"><summary>12. Amendments</summary><div class="content"><p>Unnascan reserves the right to update or modify these Terms, Conditions, and Privacy Policy at any time. Continued use constitutes acceptance of revisions.</p></div></details>
-
-<details class="section" id="contact"><summary>13. Contact Information</summary><div class="content"><p>Company: Unnatel Technologies<br>Location: Kenya<br>Email: unnatel2021@gmail.com</p></div></details>
-
-<details class="section" id="finalaccept"><summary>14. Acceptance</summary><div class="content"><p>By using Unnascan, you acknowledge that you have read, understood, and agreed to these Terms, Conditions, and Privacy Policy.</p></div></details>
+<details class="section" id="contact">
+<summary>13. Contact Information</summary>
+<div class="content">
+<p>Email: unnatel2021@gmail.com</p>
+</div>
+</details>
 
 </div>
 
-<aside class="policy-side"><div class="toc"><h4>On this page</h4>
+<!-- SIDEBAR -->
+<aside class="policy-side">
+<div class="toc">
+<h4>On this page</h4>
 <ol>
 <li><a href="#intro">Introduction</a></li>
 <li><a href="#payment">Payment Processing</a></li>
-<li><a href="#reversal">Reversal Policy</a></li>
-<li><a href="#acceptance">User Acceptance</a></li>
-<li><a href="#collection">Collection of Information</a></li>
-<li><a href="#use">Use of Information</a></li>
-<li><a href="#sharing">Sharing</a></li>
-<li><a href="#security">Security</a></li>
-<li><a href="#retention">Retention</a></li>
-<li><a href="#rights">Rights</a></li>
-<li><a href="#cookies">Cookies</a></li>
 <li><a href="#contact">Contact</a></li>
-</ol></div></aside>
+</ol>
+</div>
+</aside>
+
 </div>
 </main>
 
 <script>
 const btn=document.getElementById('themeToggle');
+
 function toggleDark(){
- document.body.classList.toggle('dark');
- const dark=document.body.classList.contains('dark');
- localStorage.setItem('unnatel_theme',dark?'dark':'light');
- btn.textContent=dark?'Light Mode':'Dark Mode';
+document.body.classList.toggle('dark');
+const dark=document.body.classList.contains('dark');
+localStorage.setItem('unnatel_theme',dark?'dark':'light');
+btn.textContent=dark?'Light Mode':'Dark Mode';
 }
+
 if(localStorage.getItem('unnatel_theme')==='dark'){
- document.body.classList.add('dark');
- btn.textContent='Light Mode';
+document.body.classList.add('dark');
+btn.textContent='Light Mode';
 }
+
 document.querySelectorAll('.toc a').forEach(link=>{
- link.addEventListener('click',e=>{
-  e.preventDefault();
-  const t=document.querySelector(link.getAttribute('href'));
-  if(t){t.scrollIntoView({behavior:'smooth'}); if(t.tagName==='DETAILS') t.open=true;}
- });
+link.addEventListener('click',e=>{
+e.preventDefault();
+const t=document.querySelector(link.getAttribute('href'));
+if(t){
+t.scrollIntoView({behavior:'smooth', block:'start'});
+}
+});
 });
 </script>
+
 </body>
 </html>
