@@ -1,40 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>Privacy Policy - Unnatel Technologies</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<style>
-:root{
-  --bg:#f5f6f8;--card:#ffffff;--muted:#6b7280;--accent-1:#0d1b2a;--accent-2:#0077ff;
-  --radius:14px;--shadow:0 8px 30px rgba(13,27,42,.08);--max-width:980px;
-}
-body{margin:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:var(--bg);color:#111827;line-height:1.6}
-header{
-  background:linear-gradient(90deg,#004aad,#0077ff);
-  color:white;padding:15px 30px;box-shadow:0 2px 10px rgba(0,0,0,.2);
-  position:sticky;top:0;z-index:40;
-}
-nav{display:flex;justify-content:space-between;align-items:center}
-.brand{display:flex;align-items:center;gap:12px}
-.brand img.logo{height:40px;width:auto;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.2)}
-.brand span{font-weight:600;font-size:18px;color:white}
-.nav-links{display:flex;align-items:center;gap:15px}
-nav a{color:white;text-decoration:none;font-weight:500}
-nav a:hover{color:#00c6ff}
-.toggle-btn{cursor:pointer;padding:8px 16px;border-radius:8px;border:none;background:linear-gradient(135deg,#2563eb,#00c6ff);color:white;font-weight:bold}
-.wrap{max-width:var(--max-width);margin:36px auto;padding:0 20px 80px}
-.hero{background:white;border-radius:14px;padding:36px;box-shadow:var(--shadow)}
-.policy{margin-top:28px;display:grid;grid-template-columns:1fr 320px;gap:24px}
-.policy-main,.toc,.contact-card{background:white;border-radius:12px;padding:20px;box-shadow:var(--shadow)}
-.policy-side{position:sticky;top:100px}
-.section{margin-bottom:16px;border:1px solid #eee;border-radius:10px}
-.section summary{padding:14px 18px;font-weight:700;cursor:pointer}
-.section .content{padding:0 18px 18px}
-.toc a{color:#0077ff;text-decoration:none}
-@media(max-width:980px){.policy{grid-template-columns:1fr}.policy-side{position:static}}
-</style>
+  <meta charset="UTF-8">
+  <title>Apps - Unnatel Technologies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    header {
+      background: linear-gradient(90deg, #0d1b2a, #1b263b);
+      color: white;
+      padding: 15px 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand img.logo {
+      height: 40px;
+      width: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .brand span {
+      font-weight: 600;
+      font-size: 18px;
+      color: white;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00c6ff;
+    }
+    .hero-banner {
+      background: linear-gradient(135deg, #0077ff, #00c6ff);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .hero-banner h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+    .hero-banner p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .apps-showcase {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .app-highlight {
+      flex: 1 1 400px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .app-highlight:hover {
+      transform: translateY(-5px);
+    }
+    .app-highlight img.app-icon {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    .app-highlight h2 {
+      color: #004aad;
+      margin-bottom: 15px;
+    }
+    .app-highlight p {
+      line-height: 1.6;
+    }
+    .app-highlight ul {
+      text-align: left;
+      margin: 15px auto;
+      max-width: 300px;
+    }
+    .app-highlight a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #0077ff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .app-highlight a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background: #004aad;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .dark {
+      background: #121212;
+      color: #e0e0e0;
+    }
+    .dark header, .dark footer {
+      background: #1f1f1f;
+    }
+    .dark .app-highlight {
+      background: #1e1e1e;
+      color: #e0e0e0;
+    }
+    .dark .app-highlight img.app-icon {
+      box-shadow: 0 3px 8px rgba(255,255,255,0.2);
+    }
+    .toggle-btn {
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: none;
+      background: linear-gradient(135deg, #2563eb, #00c6ff);
+      color: white;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .toggle-btn:hover {
+      background: linear-gradient(135deg, #1d4ed8, #0099ff);
+      transform: scale(1.05);
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
@@ -44,7 +165,7 @@ nav a:hover{color:#00c6ff}
       <span>Unnatel Technologies</span>
     </div>
     <div class="nav-links">
-      <button class="toggle-btn" onclick="toggleDark()" id="themeToggle">Dark Mode</button>
+      <button class="toggle-btn" onclick="toggleDark()">Dark Mode</button>
       <a href="index.html">Home</a>
       <a href="apps.html">Apps</a>
       <a href="privacy-policy.html">Privacy</a>
@@ -53,89 +174,70 @@ nav a:hover{color:#00c6ff}
   </nav>
 </header>
 
-<main class="wrap">
-<section class="hero">
-<h2 id="overview">Privacy Policy</h2>
-<p>How Unnatel Technologies collects, uses, stores and protects information for Unnascan and related services.</p>
-</section>
+<!-- Hero Banner -->
+<div class="hero-banner">
+  <h1>Smart Apps by Unnatel</h1>
+  <p>Innovative solutions for payments, school management, and digital transformation — built for security and excellence.</p>
+</div>
 
-<div class="policy">
-<div class="policy-main">
+<!-- Apps Showcase -->
+<div class="container apps-showcase">
 
-<details class="section" id="info-collect" open>
-<summary>1. Information We Collect</summary>
-<div class="content"><p>Your existing content goes here.</p></div>
-</details>
+  <!-- UNNASCAN -->
+  <div class="app-highlight">
+    <img src="assets/images/logo.png" alt="Unnascan Logo" class="app-icon">
+    <h2>Unnascan</h2>
+    <p>
+      <strong>Unnascan</strong> is a QR Scan & Pay app that integrates with <strong>M-PESA</strong> for instant mobile payments. 
+      Merchants and customers benefit from fast, secure transactions by scanning QR codes linked to till numbers, paybill numbers, or phone numbers.
+    </p>
+    <ul>
+      <li>Instant QR-based payments</li>
+      <li>Secure transaction logging</li>
+      <li>Merchant payout reconciliation</li>
+      <li>Cross-platform support (Android/iOS)</li>
+    </ul>
+    <a href="#">View on Google Play →</a>
+  </div>
 
-<details class="section" id="how-use">
-<summary>2. How We Use Information</summary>
-<div class="content"><p>Your existing content goes here.</p></div>
-</details>
-
-<details class="section" id="sharing">
-<summary>3. Sharing of Information</summary>
-<div class="content"><p>Your existing content goes here.</p></div>
-</details>
-
-<details class="section" id="security">
-<summary>4. Data Security</summary>
-<div class="content"><p>Your existing content goes here.</p></div>
-</details>
-
-<details class="section" id="retention">
-<summary>5. Data Retention</summary>
-<div class="content"><p>Your existing content goes here.</p></div>
-</details>
-
-<details class="section" id="rights">
-<summary>6. Your Rights</summary>
-<div class="content"><p>Your existing content goes here.</p></div>
-</details>
-
-<details class="section" id="cookies">
-<summary>7. Cookies</summary>
-<div class="content"><p>Your existing content goes here.</p></div>
-</details>
-
-<details class="section" id="contact">
-<summary>9. Contact</summary>
-<div class="content"><p>Email: unnatel2021@gmail.com</p></div>
-</details>
+  <!-- UNNAPACK -->
+  <div class="app-highlight">
+    <img src="assets/images/Unnapack.png" alt="Unnapack Poster" class="app-icon">
+    <h2>Unnapack</h2>
+    <p>
+      <strong>Unnapack</strong> is a smart school management and digital payment system. 
+      Schools can collect fees via <strong>M-PESA Paybill</strong>, send instant SMS receipts to parents, and manage records, exams, staff, transport, and assets — all in one platform.
+    </p>
+    <ul>
+      <li>Automated fee collection</li>
+      <li>Instant SMS & receipts</li>
+      <li>Exam, staff & transport tracking</li>
+      <li>Secure financial automation</li>
+    </ul>
+    <a href="#">Coming Soon</a>
+  </div>
 
 </div>
 
-<aside class="policy-side">
-<div class="toc">
-<h4>On this page</h4>
-<ol>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#info-collect">Information We Collect</a></li>
-<li><a href="#how-use">How We Use Information</a></li>
-<li><a href="#sharing">Sharing of Information</a></li>
-<li><a href="#security">Data Security</a></li>
-<li><a href="#retention">Data Retention</a></li>
-<li><a href="#rights">Your Rights</a></li>
-<li><a href="#cookies">Cookies</a></li>
-<li><a href="#contact">Contact</a></li>
-</ol>
-</div>
-</aside>
-</div>
-</main>
+<footer>
+  © 2026 Unnatel Technologies. All rights reserved.
+</footer>
 
+<!-- Dark Mode Script -->
 <script>
-function toggleDark(){document.body.classList.toggle('dark');}
-
-document.querySelectorAll('.toc a').forEach(link=>{
- link.addEventListener('click',function(e){
-  e.preventDefault();
-  const target=document.querySelector(this.getAttribute('href'));
-  if(target){
-   target.scrollIntoView({behavior:'smooth',block:'start'});
-   if(target.tagName.toLowerCase()==='details'){target.open=true;}
+function toggleDark() {
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
   }
- });
-});
+}
+window.onload = function () {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+  }
+};
 </script>
 
 </body>
