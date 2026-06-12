@@ -1,14 +1,16 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   background: #f5f7fb;
   color: #222;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 header {
-  background: #0d1b2a;
+  background: linear-gradient(90deg, #0d1b2a, #1b263b);
   color: white;
   padding: 20px 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 nav {
@@ -21,6 +23,12 @@ nav a {
   color: white;
   text-decoration: none;
   margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00c6ff;
 }
 
 .container {
@@ -30,28 +38,55 @@ nav a {
 }
 
 .hero {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
+  background: linear-gradient(135deg, #ffffff, #f0f4ff);
+  padding: 50px;
+  border-radius: 16px;
   text-align: center;
   margin-top: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  animation: fadeIn 0.8s ease;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  color: #0d1b2a;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #444;
 }
 
 .card {
   background: white;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 25px;
+  margin-top: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+  color: #1b263b;
+  margin-bottom: 15px;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  padding: 25px;
+  margin-top: 50px;
   font-size: 14px;
   color: gray;
+  background: #f0f4ff;
+  border-top: 1px solid #ddd;
 }
+
 /* DARK MODE */
 body.dark {
   background: #0f172a;
@@ -64,14 +99,32 @@ body.dark .card {
 }
 
 body.dark header {
-  background: #020617;
+  background: linear-gradient(90deg, #020617, #1e293b);
+}
+
+body.dark .hero {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #e2e8f0;
 }
 
 .toggle-btn {
   cursor: pointer;
-  padding: 6px 12px;
+  padding: 8px 16px;
   border-radius: 8px;
   border: none;
-  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #00c6ff);
   color: white;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #0099ff);
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
