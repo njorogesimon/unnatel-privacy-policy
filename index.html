@@ -1,8 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Unnatel Technologies</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <meta name="description" content="Unnatel Technologies is a software development company in Kenya building mobile and web applications.">
+  <meta name="keywords" content="Unnatel Technologies, Android apps Kenya, software development, mobile apps">
+  <meta name="author" content="Unnatel Technologies">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -10,8 +18,13 @@
 
 <header>
   <nav>
-    <div><strong>Unnatel Technologies</strong></div>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <strong>Unnatel Technologies</strong>
+    </div>
+
     <div>
+      <button class="toggle-btn" onclick="toggleDark()">Dark Mode</button>
+
       <a href="index.html">Home</a>
       <a href="apps.html">Apps</a>
       <a href="privacy-policy.html">Privacy</a>
@@ -23,15 +36,18 @@
 <div class="container">
 
   <div class="hero">
-    <h1>Building Modern Mobile & Web Apps</h1>
-    <p>Unnatel Technologies delivers reliable, secure, and scalable digital solutions.</p>
+    <h1>Building Reliable Digital Solutions</h1>
+    <p>
+      Unnatel Technologies designs and develops modern mobile and web applications
+      for businesses, institutions, and startups.
+    </p>
   </div>
 
   <div class="card">
     <h2>About Us</h2>
     <p>
       We are a Kenya-based software development company focused on building
-      mobile applications, web systems, and digital platforms for businesses.
+      mobile applications, web systems, and scalable digital platforms.
     </p>
   </div>
 
@@ -51,11 +67,36 @@
     <a href="apps.html">View Apps →</a>
   </div>
 
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Email: support@unnateltechnologies.com</p>
+  </div>
+
 </div>
 
 <footer>
   © 2026 Unnatel Technologies. All rights reserved.
 </footer>
+
+<!-- Dark Mode Script -->
+<script>
+function toggleDark() {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+}
+
+// Load saved theme
+window.onload = function () {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+  }
+};
+</script>
 
 </body>
 </html>
