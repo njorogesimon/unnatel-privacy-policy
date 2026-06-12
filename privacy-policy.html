@@ -424,7 +424,7 @@ body.dark header{
     </div>
   </footer>
 
-  <script>
+ <script>
 function toggleDark() {
   document.body.classList.toggle("dark");
 
@@ -443,6 +443,28 @@ window.onload = function () {
     document.getElementById("themeToggle").textContent = "Light Mode";
   }
 };
+
+/* TOC LINKS */
+document.querySelectorAll('.toc a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+
+    const target = document.querySelector(
+      link.getAttribute('href')
+    );
+
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+
+      if (target.tagName === 'DETAILS') {
+        target.open = true;
+      }
+    }
+  });
+});
 </script>
 </body>
 </html>
