@@ -247,25 +247,19 @@
 <body>
 
   <header>
-    <div class="nav-inner" role="navigation" aria-label="Main navigation">
-      <div class="brand" aria-hidden="false">
-        <!-- logo: replace path if you have a dedicated logo in assets/images -->
-        <img src="assets/images/unnascan-logo.jpeg" alt="Unnatel Technologies logo" />
-        <div>
-          <h1>Unnatel Technologies</h1>
-          <div class="small">Secure payments • School systems • Custom apps</div>
-        </div>
-      </div>
-
-      <div class="nav-actions" role="group" aria-label="Site links">
-        <a href="index.html">Home</a>
-        <a href="apps.html">Apps</a>
-        <a href="privacy-policy.html" aria-current="page">Privacy</a>
-        <a href="contact.html">Contact</a>
-        <button class="toggle-btn" onclick="toggleDark()" aria-pressed="false" id="themeToggle">Dark Mode</button>
-      </div>
+  <nav>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <strong>Unnatel Technologies</strong>
     </div>
-  </header>
+    <div>
+      <button class="toggle-btn" onclick="toggleDark()">Dark Mode</button>
+      <a href="index.html">Home</a>
+      <a href="apps.html">Apps</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
 
   <main class="wrap" id="maincontent">
     <section class="hero" aria-labelledby="policy-title">
