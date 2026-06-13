@@ -1,66 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Apps - Unnatel Technologies</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Unnatel Technologies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f5f7fb;
-  color: #222;
-  transition: background 0.3s ease, color 0.3s ease;
+  <!-- SEO -->
+  <meta name="description" content="Unnatel Technologies is a software development company in Kenya building mobile and web applications.">
+  <meta name="keywords" content="Unnatel Technologies, Android apps Kenya, software development, mobile apps">
+  <meta name="author" content="Unnatel Technologies">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    header {
+      background: linear-gradient(90deg, #0d1b2a, #1b263b);
+      color: white;
+      padding: 20px 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00c6ff;
+    }
+    .hero-banner {
+      background: linear-gradient(135deg, #0077ff, #00c6ff);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero-banner h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    .hero-banner p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      margin-top: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+    .card h2 {
+      color: #1b263b;
+      margin-bottom: 15px;
+    }
+    .card ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #0077ff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .card a:hover {
+      color: #00c6ff;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+      font-size: 14px;
+      color: gray;
+      background: #f0f4ff;
+      border-top: 1px solid #ddd;
+    }
+    /* DARK MODE */
+    body.dark {
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+    body.dark .card {
+      background: #1e293b;
+      color: #e2e8f0;
+    }
+    body.dark header {
+      background: linear-gradient(90deg, #020617, #1e293b);
+    }
+    body.dark .hero-banner {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      color: #e2e8f0;
+    }
+    .toggle-btn {
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: none;
+      background: linear-gradient(135deg, #2563eb, #00c6ff);
+      color: white;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .toggle-btn:hover {
+      background: linear-gradient(135deg, #1d4ed8, #0099ff);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <strong>Unnatel Technologies</strong>
+    </div>
+    <div>
+      <button class="toggle-btn" onclick="toggleDark()">Dark Mode</button>
+      <a href="index.html">Home</a>
+      <a href="apps.html">Apps</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero Banner -->
+<div class="hero-banner">
+  <h1>Building Reliable Digital Solutions</h1>
+  <p>Unnatel Technologies designs and develops modern mobile and web applications for businesses, institutions, and startups.</p>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <h2>About Us</h2>
+    <p>We are a Kenya-based software development company focused on building mobile applications, web systems, and scalable digital platforms.</p>
+  </div>
+
+  <div class="card">
+    <h2>What We Do</h2>
+    <ul>
+      <li>Android App Development</li>
+      <li>Web Application Development</li>
+      <li>API & Backend Systems</li>
+      <li>Business Digital Solutions</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Our Apps</h2>
+    <p>Explore applications built by Unnatel Technologies.</p>
+    <a href="apps.html">View Apps →</a>
+  </div>
+
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Email: support@unnatel.com</p>
+    <p>Phone: +254 712 991 811</p>
+    <p>Location: ACK Rd. Street No. 9, Mwiki Estate, Nairobi</p>
+    <a href="contact.html">Get in Touch →</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Unnatel Technologies. All rights reserved.
+</footer>
+
+<!-- Dark Mode Script -->
+<script>
+function toggleDark() {
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 }
+window.onload = function () {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+  }
+};
+</script>
 
-/* HEADER (MATCH INDEX STYLE) */
-header{
-  background:linear-gradient(90deg,#0d1b2a,#1b263b);
-  color:#fff;
-  padding:20px 40px;
-  box-shadow:0 2px 10px rgba(0,0,0,.2);
-  position:sticky;
-  top:0;
-  z-index:40;
-}
-
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-nav a{
-  color:#fff;
-  text-decoration:none;
-  margin-left:20px;
-  font-weight:500;
-  transition:color .3s ease;
-}
-
-nav a:hover{
-  color:#00c6ff;
-}
-
-/* TOGGLE BUTTON (MATCH INDEX) */
-.toggle-btn{
-  cursor:pointer;
-  padding:8px 16px;
-  border-radius:8px;
-  border:none;
-  background:linear-gradient(135deg,#2563eb,#00c6ff);
-  color:#fff;
-  font-weight:bold;
-  transition:background .3s ease,transform .2s ease;
-}
-
-.toggle-btn:hover{
-  background:linear-gradient(135deg,#1d4ed8,#0099ff);
-  transform:scale(1.05);
-}
-
-/* HERO */
-.hero-banner{
-  background:linear-gradient(135deg,#0077ff,#00c6ff);
- 
+</body>
+</html>
