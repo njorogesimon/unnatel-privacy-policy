@@ -94,7 +94,25 @@ body.dark header{
       margin: 36px auto;
       padding: 0 20px 80px;
     }
+.hero{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.9),
+    rgba(240,246,255,.9)
+  );
+  border-radius:14px;
+  padding:36px;
+  box-shadow:var(--shadow);
 
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+}
+
+.hero-left{
+  flex:1;
+}
     /* Hero */
     .hero-visual{
   width:220px;
@@ -111,11 +129,12 @@ body.dark header{
 }
 
 .hero-visual img{
-  width:90px;
-  height:90px;
+  width:100px;
+  height:100px;
   object-fit:contain;
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
+
 
 .hero-visual span{
   margin-top:10px;
@@ -124,7 +143,7 @@ body.dark header{
   color:#004aad;
   text-align:center;
 }
-}
+
 
 body.dark .hero-visual{
   background:linear-gradient(
@@ -146,7 +165,11 @@ body.dark .hero-visual span{
       gap:24px;
       align-items:start;
     }
-
+.lead{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
+}
     /* Left column */
     .policy-main {
       background:var(--card);
@@ -226,7 +249,11 @@ body.dark .hero-visual span{
       .policy { grid-template-columns: 1fr; }
       .policy-side { position:static; top:auto; }
       .hero { flex-direction:column; text-align:center; gap:18px; }
-      .hero-visual { margin:0 auto; }
+     .hero-visual{
+  margin:0 auto;
+  width:180px;
+  height:140px;
+}
     }
 
     /* Dark mode */
@@ -239,7 +266,14 @@ body.dark .hero-visual span{
       background: #071025;
       color: #e6eefc;
     }
-    body.dark .hero { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); }
+    body.dark .hero-visual{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.02)
+  );
+  border:1px solid rgba(255,255,255,.08);
+}
     body.dark .toc, body.dark .contact-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); }
     body.dark .policy-main { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); box-shadow:none; border:1px solid rgba(255,255,255,0.03); }
     body.dark header { background: linear-gradient(90deg,#020617,#071025); box-shadow:none; }
@@ -275,16 +309,24 @@ body.dark .hero-visual span{
 
   <main class="wrap" id="maincontent">
     <section class="hero" aria-labelledby="policy-title">
-      <div class="hero-left">
-        <h2 id="policy-title">Privacy Policy</h2>
-        <p class="lead">How Unnatel Technologies collects, uses, stores and protects information for Unnascan and related services.</p>
-        <p class="small" style="margin-top:10px">Effective date: <strong>1 June 2026</strong></p>
-      </div>
-     <div class="hero-visual">
-  <img src="assets/images/logounnatel.png" alt="Unnascan Logo" />
-  <span>🔒 Data Protection</span>
-</div>
-    </section>
+  <div class="hero-left">
+    <h2 id="policy-title">Privacy Policy</h2>
+
+    <p class="lead">
+      How Unnatel Technologies collects, uses, stores and protects information
+      for Unnascan and related services.
+    </p>
+
+    <p class="small" style="margin-top:10px">
+      Effective date: <strong>1st June 2026</strong>
+    </p>
+  </div>
+
+  <div class="hero-visual">
+    <img src="assets/images/logounnatel.png" alt="Unnascan Logo">
+    <span>🔒 Data Protection</span>
+  </div>
+</section>
 
     <div class="policy" role="region" aria-label="Privacy policy content">
       <!-- Left: main policy -->
