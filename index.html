@@ -20,27 +20,33 @@
       color: #222;
       transition: background 0.3s ease, color 0.3s ease;
     }
-    header {
-      background: linear-gradient(90deg, #0d1b2a, #1b263b);
-      color: white;
-      padding: 20px 40px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #00c6ff;
-    }
+   header{
+  background:linear-gradient(90deg,#0d1b2a,#1b263b);
+  color:#fff;
+  padding:20px 40px;
+  box-shadow:0 2px 10px rgba(0,0,0,.2);
+  position:sticky;
+  top:0;
+  z-index:40;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:500;
+  transition:color .3s ease;
+}
+
+nav a:hover{
+  color:#00c6ff;
+}
     .hero-banner {
       background: linear-gradient(135deg, #0077ff, #00c6ff);
       color: white;
@@ -117,20 +123,24 @@
       background: linear-gradient(135deg, #1e293b, #0f172a);
       color: #e2e8f0;
     }
-    .toggle-btn {
-      cursor: pointer;
-      padding: 8px 16px;
-      border-radius: 8px;
-      border: none;
-      background: linear-gradient(135deg, #2563eb, #00c6ff);
-      color: white;
-      font-weight: bold;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-    .toggle-btn:hover {
-      background: linear-gradient(135deg, #1d4ed8, #0099ff);
-      transform: scale(1.05);
-    }
+    .toggle-btn{
+  cursor:pointer;
+  padding:8px 16px;
+  border-radius:8px;
+  border:none;
+  background:linear-gradient(135deg,#2563eb,#00c6ff);
+  color:#fff;
+  font-weight:bold;
+  transition:background .3s ease,transform .2s ease;
+}
+
+.toggle-btn:hover{
+  background:linear-gradient(135deg,#1d4ed8,#0099ff);
+  transform:scale(1.05);
+}
+    body.dark header{
+  background:linear-gradient(90deg,#020617,#1e293b);
+}
   </style>
 </head>
 
@@ -141,11 +151,16 @@
     <div style="display:flex; align-items:center; gap:10px;">
       <strong>Unnatel Technologies</strong>
     </div>
+
     <div>
-      <button class="toggle-btn" onclick="toggleDark()">Dark Mode</button>
+      <button class="toggle-btn" onclick="toggleDark()" id="themeToggle">
+        Dark Mode
+      </button>
+
       <a href="index.html">Home</a>
       <a href="apps.html">Apps</a>
       <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
