@@ -32,7 +32,13 @@
       line-height:1.6;
       transition: background .25s ease, color .25s ease;
     }
+html{
+  scroll-behavior:smooth;
+}
 
+details{
+  scroll-margin-top:120px;
+}
     /* Header / Nav */
    header{
   background:linear-gradient(90deg,#0d1b2a,#1b263b);
@@ -454,14 +460,19 @@ document.querySelectorAll('.toc a').forEach(link => {
     );
 
     if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
 
       if (target.tagName === 'DETAILS') {
         target.open = true;
       }
+
+      const headerOffset = 100;
+      const elementPosition =
+        target.getBoundingClientRect().top + window.pageYOffset;
+
+      window.scrollTo({
+        top: elementPosition - headerOffset,
+        behavior: 'smooth'
+      });
     }
   });
 });
