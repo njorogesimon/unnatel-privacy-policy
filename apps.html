@@ -216,6 +216,41 @@ footer{
 .dark footer{
   background:#1f1f1f;
 }
+  .app-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 24px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+
+.btn.primary{
+  background:#007bff;
+  color:#fff;
+}
+
+.btn.primary:hover{
+  opacity:.9;
+}
+
+.btn.secondary{
+  border:2px solid #007bff;
+  color:#007bff;
+  background:transparent;
+}
+
+.btn.secondary:hover{
+  background:#007bff;
+  color:#fff;
+}
 /* DARK BUTTON */
 .toggle-btn{
   cursor:pointer;
@@ -423,10 +458,42 @@ body.dark header{
       <div class="tag">Automation</div>
     </div>
 
-    <p>
-      Unnapack is a complete school management system that automates fee collection, student tracking, exams, staff management,
-      and communication between schools and parents.
-    </p>
+    <section class="app-details">
+  <h2>Unnapack</h2>
+
+  <p>
+    <strong>Unnapack</strong> is a comprehensive school management platform designed to streamline and digitize daily school operations. The system brings together student administration, fee management, academic records, staff management, transport coordination, and parent communication into a single integrated solution, helping educational institutions operate more efficiently and transparently.
+  </p>
+
+  <p>
+    By automating routine administrative tasks, Unnapack reduces paperwork, improves record accuracy, and enhances communication between schools, parents, teachers, and administrators. The platform enables schools to manage finances, monitor student progress, and access critical information in real time through a centralized dashboard.
+  </p>
+
+  <h3>Key Features</h3>
+
+  <ul>
+    <li><strong>Automated Fee Collection</strong> – Supports seamless school fee payments through M-PESA Paybill integration with automatic payment reconciliation.</li>
+    <li><strong>Instant SMS Notifications & Receipts</strong> – Parents receive real-time payment confirmations, receipts, and important school updates via SMS.</li>
+    <li><strong>Student Information Management</strong> – Maintains comprehensive student records, including admissions, attendance, academic performance, and disciplinary history.</li>
+    <li><strong>Examination & Academic Management</strong> – Facilitates exam setup, grading, report card generation, and performance analysis.</li>
+    <li><strong>Staff Management</strong> – Organizes employee records, roles, responsibilities, and administrative workflows.</li>
+    <li><strong>School Transport Management</strong> – Tracks transport routes, assigned vehicles, drivers, and student transportation records.</li>
+    <li><strong>Parent & School Communication</strong> – Enhances engagement through timely notifications, announcements, and school updates.</li>
+    <li><strong>Digital Operations Dashboard</strong> – Provides administrators with real-time insights into finances, student data, academic performance, and overall school operations.</li>
+    <li><strong>Centralized Reporting & Analytics</strong> – Generates detailed reports to support informed decision-making and institutional growth.</li>
+  </ul>
+
+  <p>
+    Unnapack empowers schools to embrace digital transformation by providing a secure, reliable, and scalable platform that simplifies administration, improves efficiency, and strengthens collaboration between schools and parents.
+  </p>
+
+  <div class="app-buttons">
+    <a href="#" class="btn primary">Request Demo</a>
+    <a href="unnapack.html" class="btn secondary">Learn More</a>
+    <a href="contact.html" class="btn secondary">Contact Us</a>
+  </div>
+</section>
+
 
     <ul>
       <li>Automated fee collection via M-PESA Paybill</li>
