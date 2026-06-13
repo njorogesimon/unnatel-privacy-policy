@@ -100,7 +100,36 @@ body.dark .hero-visual span{
   align-items:center;
   gap:24px;
 }
+.hero-left{
+  flex:1;
+}
 
+.hero-visual{
+  width:220px;
+  height:160px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#e6f0ff,#ffffff);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  box-shadow:0 8px 30px rgba(3,102,214,.08);
+  padding:15px;
+}
+
+.hero-visual img{
+  width:90px;
+  height:90px;
+  object-fit:contain;
+  margin-bottom:10px;
+}
+
+.hero-visual span{
+  font-size:14px;
+  font-weight:700;
+  color:#004aad;
+}
 .hero-left{
   flex:1;
 }
@@ -144,6 +173,17 @@ gap:24px;
 
 body.dark{background:#071025;color:#e6eefc}
 body.dark .hero,body.dark .policy-main,body.dark .toc{background:#0b1220;color:#e6eefc}
+  body.dark .hero-visual{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.03),
+    rgba(255,255,255,.01)
+  );
+}
+
+body.dark .hero-visual span{
+  color:#4fd1ff;
+}
 body.dark header{background:linear-gradient(90deg,#020617,#071025)}
 
 @media(max-width:980px){
@@ -177,16 +217,24 @@ body.dark header{background:linear-gradient(90deg,#020617,#071025)}
 <main class="wrap">
 <section class="hero">
 
+  <section class="hero">
+
   <div class="hero-left">
     <h2 id="overview">
       UNNASCAN TERMS, CONDITIONS & PRIVACY POLICY
     </h2>
 
     <p>
-      <strong>Effective Date:</strong>
-      20th May, 2026
+      <strong>Effective Date:</strong> 1st June, 2026
     </p>
   </div>
+
+  <div class="hero-visual">
+    <img src="assets/images/unnascan-logo.jpeg" alt="Unnascan Logo">
+    <span>⚖️ Legal Agreement</span>
+  </div>
+
+</section>
 
   <div class="hero-visual">
     <img src="assets/images/unnascan-logo.jpeg"
