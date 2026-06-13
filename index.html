@@ -66,6 +66,12 @@ nav a:hover{
   margin: 0 auto;
   line-height: 1.6;
 }
+    nav a.active {
+  color: #00c6ff;
+  font-weight: 700;
+  border-bottom: 2px solid #00c6ff;
+  padding-bottom: 4px;
+}
     .container {
       max-width: 1100px;
       margin: auto;
@@ -208,7 +214,19 @@ nav a:hover{
     <p>Location: ACK Rd. Street No. 9, Mwiki Estate, Nairobi</p>
     <a href="contact.html">Get in Touch →</a>
   </div>
+<script>
+const currentPage = window.location.pathname.split("/").pop();
 
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
+  const linkPage = link.getAttribute("href");
+
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  }
+});
+</script>
 </div>
 
 <footer>
