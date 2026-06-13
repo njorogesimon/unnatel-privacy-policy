@@ -74,10 +74,24 @@ gap:24px;
 
 /* ✅ FIXED SIDEBAR */
 .policy-side{
-position:fixed;
-top:96px;
-right:calc((100% - 980px)/2);
-width:320px;
+  position:sticky;
+  top:100px;
+  height:fit-content;
+  align-self:start;
+}
+  .policy-side{
+  position:sticky;
+  top:100px;
+  max-height:calc(100vh - 120px);
+  overflow-y:auto;
+}
+  html{
+  scroll-behavior:smooth;
+}
+
+.section,
+#policy-main{
+  scroll-margin-top:120px;
 }
 
 .toc{padding:18px}
@@ -278,15 +292,14 @@ if(localStorage.getItem('unnatel_theme')==='dark'){
  document.body.classList.add('dark');
  btn.textContent='Light Mode';
 }
-document.querySelectorAll('.toc a').forEach(link=>{
- link.addEventListener('click',e=>{
-  e.preventDefault();
-  const t=document.querySelector(link.getAttribute('href'));
-  if(t){
-    t.scrollIntoView({behavior:'smooth', block:'start'});
-    if(t.tagName==='DETAILS') t.open=true;
-  }
- });
+document.querySelectorAll('.toc a').forEach(link => {
+  link.addEventListener('click', () => {
+    const target = document.querySelector(link.getAttribute('href'));
+
+    if (target && target.tagName === 'DETAILS') {
+      target.open = true;
+    }
+  });
 });
 </script>
 
