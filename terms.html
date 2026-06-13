@@ -1,95 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>UNNASCAN Terms, Conditions & Privacy Policy</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<style>
-:root{
-  --bg:#f5f6f8;
-  --card:#ffffff;
-  --text:#111827;
-  --muted:#6b7280;
-  --accent:#0077ff;
-  --shadow:0 8px 30px rgba(13,27,42,.08);
-  --max-width:980px;
+  <meta charset="utf-8" />
+  <title>Privacy Policy - Unnatel Technologies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Privacy Policy for Unnatel Technologies — how we collect, use, store and protect data for Unnascan and related services." />
+  <meta name="author" content="Unnatel Technologies" />
+
+  <style>
+    :root{
+      --bg:#f5f6f8;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent-1:#0d1b2a;
+      --accent-2:#0077ff;
+      --glass: rgba(255,255,255,0.6);
+      --radius:14px;
+      --shadow: 0 8px 30px rgba(13,27,42,0.08);
+      --max-width:980px;
+    }
+
+    /* Base */
+    html,body{height:100%}
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: #111827;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      transition: background .25s ease, color .25s ease;
+    }
+html{
+  scroll-behavior:smooth;
 }
 
-body{margin:0;font-family:'Segoe UI',Tahoma,Verdana,sans-serif;background:var(--bg);color:#111827;line-height:1.6}
-header{
-background:linear-gradient(90deg,#0d1b2a,#1b263b);
-color:#fff;
-padding:20px 40px;
-box-shadow:0 2px 10px rgba(0,0,0,.2);
-position:sticky;
-top:0;
-z-index:40
+details{
+  scroll-margin-top:120px;
 }
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center
-}
-
-nav a{
-color:#fff;
-text-decoration:none;
-margin-left:20px;
-font-weight:500;
-transition:color .3s ease
-}
-
-nav a:hover{
-color:#00c6ff
-}
-a {
-  text-decoration: none;
-}
-  a:hover {
-  text-decoration: none;
-  opacity: 0.85;
-}
-.toggle-btn{
-cursor:pointer;
-padding:8px 16px;
-border-radius:8px;
-border:none;
-background:linear-gradient(135deg,#2563eb,#00c6ff);
-color:#fff;
-font-weight:bold;
-transition:background .3s ease,transform .2s ease
-}
-
-.toggle-btn:hover{
-background:linear-gradient(135deg,#1d4ed8,#0099ff);
-transform:scale(1.05)
-}
-
-.wrap{
-  max-width:var(--max-width);
-  margin:36px auto;
-  padding:0 20px 80px;
-}
-nav a.active {
+    nav a.active {
   color: #00c6ff;
   font-weight: 700;
   border-bottom: 2px solid #00c6ff;
   padding-bottom: 4px;
 }
+    /* Header / Nav */
+   header{
+  background:linear-gradient(90deg,#0d1b2a,#1b263b);
+  color:#fff;
+  padding:20px 40px;
+  box-shadow:0 2px 10px rgba(0,0,0,.2);
+  position:sticky;
+  top:0;
+  z-index:40;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:500;
+  transition:color .3s ease;
+}
+
+nav a:hover{
+  color:#00c6ff;
+}
+
+.toggle-btn{
+  cursor:pointer;
+  padding:8px 16px;
+  border-radius:8px;
+  border:none;
+  background:linear-gradient(135deg,#2563eb,#00c6ff);
+  color:#fff;
+  font-weight:bold;
+  transition:background .3s ease,transform .2s ease;
+}
+
+.toggle-btn:hover{
+  background:linear-gradient(135deg,#1d4ed8,#0099ff);
+  transform:scale(1.05);
+}
+
+body.dark header {
+  background: linear-gradient(90deg, #020617, #1e293b);
+}
+body.dark footer {
+  background: #1f1f1f;
+}
+
+    /* Container */
+    .wrap {
+      max-width: var(--max-width);
+      margin: 36px auto;
+      padding: 0 20px 80px;
+    }
 .hero{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.9),
+    rgba(240,246,255,.9)
+  );
+  border-radius:14px;
   padding:36px;
+  box-shadow:var(--shadow);
+
   display:flex;
   justify-content:space-between;
   align-items:center;
   gap:24px;
+  flex-wrap:nowrap; /* 🔥 prevents image dropping below */
 }
 
 .hero-left{
   flex:1;
+  min-width:0; /* 🔥 prevents text forcing layout break */
 }
-
 .hero-visual{
+  flex-shrink:0;
+}
+    /* Hero */
+    .hero-visual{
   width:220px;
   height:160px;
   border-radius:16px;
@@ -102,7 +141,6 @@ nav a.active {
   box-shadow:0 8px 30px rgba(3,102,214,.08);
   padding:15px;
 }
-
 
 .hero-visual img{
   width:100px;
@@ -117,138 +155,155 @@ nav a.active {
   font-size:14px;
   font-weight:700;
   color:#004aad;
+  text-align:center;
 }
 
-.policy {
-  margin-top: 28px;
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 24px;
-  align-items: start;
+
+body.dark .hero-visual{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.03),
+    rgba(255,255,255,.01)
+  );
 }
 
-.policy-main{padding:26px}
-
-/* ✅ FIXED SIDEBAR */
-.policy-side {
-  position: sticky;
-  top: 100px;
-  align-self: start;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
-}
-  html{
-  scroll-behavior:smooth;
-}
-  .policy-side {
-  padding: 0;
-}
-@media (max-width:980px){
-  .hero-visual{
-    width:180px;
-    height:140px;
-  }
-
-  .hero-visual img{
-    width:100px;
-    height:100px;
-  }
-
-#policy-main{
-  scroll-margin-top:120px;
+body.dark .hero-visual span{
+  color:#4fd1ff;
 }
 
-.toc ol {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-  counter-reset: section;
+    /* Main content */
+    .policy {
+      margin-top:28px;
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:24px;
+      align-items:start;
+    }
+.lead{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
 }
+    /* Left column */
+    .policy-main {
+      background:var(--card);
+      border-radius:12px;
+      padding:26px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.06);
+    }
+    .policy-main h3 { margin-top:0; color:var(--accent-1); }
+    .policy-main ul { padding-left:18px; margin-top:8px; color:#374151; }
+    .policy-main li { margin:8px 0; }
 
-.toc ol li {
-  counter-increment: section;
-  margin: 6px 0;
-  display: flex;
-  gap: 6px;
-}
+    /* Right column - TOC & quick actions */
+    .policy-side {
+      position:sticky;
+      top:96px;
+      align-self:start;
+    }
+    .toc {
+      background: linear-gradient(180deg,#ffffff,#f8fbff);
+      padding:18px;
+      border-radius:12px;
+      box-shadow: 0 6px 20px rgba(2,6,23,0.04);
+    }
+    .toc h4 { margin:0 0 8px; font-size:15px; color:var(--accent-1); }
+    .toc ol { padding-left:18px; margin:0; color:var(--muted); }
+    .toc a { color:var(--accent-2); text-decoration:none; font-weight:600; font-size:14px; }
+    .toc a:hover { text-decoration:underline; }
 
-.toc ol li::before {
-  content: counter(section) ".";
-  color: #0077ff;
-  font-weight: 600;
-  min-width: 22px;
-}
+    .contact-card {
+      margin-top:16px;
+      padding:16px;
+      border-radius:12px;
+      background:linear-gradient(180deg,#fff,#fbfdff);
+      box-shadow: 0 6px 18px rgba(2,6,23,0.04);
+      color:#0b1220;
+    }
+    .contact-card p { margin:8px 0; color:#374151; }
 
-.toc a {
-  color: #0077ff;
-  text-decoration: none;
-  font-weight: 500;
-}
-  .toc {
-  background: linear-gradient(180deg,#ffffff,#f8fbff);
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(2,6,23,0.04);
-}
-.section{
-  border:1px solid rgba(0,0,0,0.06);
-  border-radius:10px;
-  margin-bottom:14px;
-  overflow:hidden;
-}
-
-.section summary{
-  padding:14px 18px;
-  font-weight:700;
-  cursor:pointer;
-  background:linear-gradient(90deg,#fff,#f6f9ff);
-}
-
-.section .content{
-  padding:18px;
-}
-
-body.dark{
-  --bg:#071025;
-  --card:#0b1220;
-  --text:#e6eefc;
-  --muted:#9aa6b2;
-}
-
-body.dark{
-  background:var(--bg);
-  color:var(--text);
-}
-
-body.dark .policy-main,
-body.dark .toc{
-  background:var(--card);
-}
-  footer {
+    /* Accordion style for sections */
+    .section {
+      margin-bottom:18px;
+      border-radius:10px;
+      overflow:hidden;
+      border:1px solid rgba(15,23,42,0.04);
+    }
+    .section summary {
+      list-style:none;
+      cursor:pointer;
+      padding:14px 18px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(245,249,255,0.6));
+      font-weight:700;
+      color:var(--accent-1);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .section summary::-webkit-details-marker { display:none; }
+    .section .content {
+      padding:18px;
+      background:transparent;
+      color:#374151;
+    }
+footer {
   background: #004aad;
   color: white;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
 }
-@media (max-width: 980px) {
-  .policy {
-    grid-template-columns: 1fr;
-  }
+    /* Print friendly */
+    @media print {
+      header, .toc, .toggle-btn { display:none; }
+      body { background:white; color:#111; }
+      .wrap { margin:0; padding:0; }
+      .policy { grid-template-columns: 1fr; gap:0; }
+      .policy-side { display:none; }
+      .hero { box-shadow:none; border-radius:0; padding:12px; }
+    }
 
-  .policy-side {
-    position: static;
-    max-height: none;
-    overflow: visible;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
+    /* Responsive */
+    @media (max-width:980px){
+      .policy { grid-template-columns: 1fr; }
+      .policy-side { position:static; top:auto; }
+      .hero { flex-direction:column; text-align:center; gap:18px; }
+     .hero-visual{
+  margin:0 auto;
+  width:180px;
+  height:140px;
 }
+    }
 
-</style>
+    /* Dark mode */
+    body.dark {
+      --bg:#071025;
+      --card:#0b1220;
+      --muted:#9aa6b2;
+      --accent-1:#e6eefc;
+      --accent-2:#4fd1ff;
+      background: #071025;
+      color: #e6eefc;
+    }
+    body.dark .hero-visual{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.02)
+  );
+  border:1px solid rgba(255,255,255,.08);
+}
+    body.dark .toc, body.dark .contact-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); }
+    body.dark .policy-main { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); box-shadow:none; border:1px solid rgba(255,255,255,0.03); }
+    body.dark header { background: linear-gradient(90deg,#020617,#071025); box-shadow:none; }
+
+    /* small helpers */
+    .muted { color:var(--muted); font-size:14px; }
+    .small { font-size:13px; color:var(--muted); }
+    .kbd { background:#eef6ff; padding:6px 8px; border-radius:8px; font-weight:700; color:#0b3b6f; font-size:13px; }
+    body.dark .kbd { background: rgba(255,255,255,0.04); color:#cfefff; }
+  </style>
 </head>
 
 <body>
@@ -273,14 +328,21 @@ body.dark .toc{
 </header>
 
 <main class="wrap">
-<section class="hero">
+<section class="hero" aria-labelledby="terms-title">
   <div class="hero-left">
-    <h2>Terms, Conditions & Privacy Policy</h2>
-    <p><strong>Effective Date:</strong> 1st June 2026</p>
+    <h2 id="terms-title">Terms, Conditions & Privacy Policy</h2>
+
+    <p class="lead">
+      Legal agreement governing the use of Unnascan and related services by Unnatel Technologies.
+    </p>
+
+    <p class="small" style="margin-top:10px">
+      Effective date: <strong>1st June 2026</strong>
+    </p>
   </div>
 
   <div class="hero-visual">
-    <img src="assets/images/logo.png">
+    <img src="assets/images/logo.png" alt="Unnascan Logo">
     <span>⚖️ Legal Agreement</span>
   </div>
 </section>
@@ -404,26 +466,23 @@ body.dark .toc{
 </div>
 
 <aside class="policy-side">
-<div class="toc">
-<h4>On this page</h4>
-<ol>
-  <li><a href="#intro">Introduction</a></li>
-  <li><a href="#payment">Payment Processing</a></li>
-  <li><a href="#reversal">Reversal Policy</a></li>
-  <li><a href="#acceptance">User Acceptance</a></li>
-  <li><a href="#collection">Collection of Information</a></li>
-  <li><a href="#use">Use of Information</a></li>
-  <li><a href="#sharing">Sharing of Information</a></li>
-  <li><a href="#security">Data Security</a></li>
-  <li><a href="#retention">Data Retention</a></li>
-  <li><a href="#rights">Your Rights</a></li>
-  <li><a href="#cookies">Cookies</a></li>
-  <li><a href="#indemnity">Indemnity</a></li>
-  <li><a href="#amendments">Amendments</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#finalaccept">Acceptance</a></li>
-</ol>
-</div>
+  <div class="toc">
+    <h4>On this page</h4>
+    <ol>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#payment">Payment Processing</a></li>
+      <li><a href="#reversal">Reversal Policy</a></li>
+      <li><a href="#acceptance">User Acceptance</a></li>
+      <li><a href="#collection">Collection of Information</a></li>
+      <li><a href="#use">Use of Information</a></li>
+      <li><a href="#sharing">Sharing of Information</a></li>
+      <li><a href="#security">Data Security</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#rights">Your Rights</a></li>
+      <li><a href="#cookies">Cookies</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </div>
 </aside>
 
 </div>
