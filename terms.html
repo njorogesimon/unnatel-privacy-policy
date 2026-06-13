@@ -62,7 +62,12 @@ transform:scale(1.05)
   border-radius:12px;
   box-shadow:var(--shadow);
 }
-
+nav a.active {
+  color: #00c6ff;
+  font-weight: 700;
+  border-bottom: 2px solid #00c6ff;
+  padding-bottom: 4px;
+}
 .hero{
   padding:36px;
   display:flex;
@@ -436,6 +441,18 @@ document.querySelectorAll('.toc a').forEach(link => {
   });
 });
 </script>
+<script>
+const currentPage = window.location.pathname.split("/").pop();
 
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
+  const linkPage = link.getAttribute("href");
+
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  }
+});
+</script>
 </body>
 </html>
