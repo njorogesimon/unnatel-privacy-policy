@@ -108,11 +108,20 @@ nav a:hover{
     .card a:hover {
       color: #00c6ff;
     }
-    .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
+ .nav-links{
+  display:flex;
+  align-items:center;
+}
+    nav div:last-child{
+  display:flex;
+  align-items:center;
+}
+    nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:15px; /* was 20px */
+  font-weight:500;
+  transition:color .3s ease;
 }
     footer {
   background: #004aad;
@@ -224,7 +233,7 @@ nav a:hover{
       <strong>Unnatel Technologies</strong>
     </div>
 
-    <div class="nav-links">
+   <div>
   <button class="toggle-btn" onclick="toggleDark()" id="themeToggle">
     Dark Mode
   </button>
