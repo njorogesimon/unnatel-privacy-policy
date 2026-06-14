@@ -13,7 +13,18 @@ body{
   color:#222;
   transition: background 0.3s ease, color 0.3s ease;
 }
+.logo-container{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
 
+.logo{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  border-radius:10px;
+}
 /* HEADER */
 header{
   background:linear-gradient(90deg,#0d1b2a,#1b263b);
@@ -454,9 +465,10 @@ body.dark a:hover{
 
 <header>
   <nav>
-    <div style="display:flex; align-items:center; gap:10px;">
-      <strong>Unnatel Technologies</strong>
-    </div>
+   <div class="logo-container">
+  <img src="assets/images/logounnnatel.png" alt="Unnatel Technologies Logo" class="logo">
+  <strong>Unnatel Technologies</strong>
+</div>
 
     <div>
       <button class="toggle-btn" onclick="toggleDark()" id="themeToggle">
