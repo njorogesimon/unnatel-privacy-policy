@@ -71,6 +71,19 @@ nav a.active {
   gap:12px;
   flex-wrap:wrap;
 }
+  .app-details{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  text-align:justify;
+}
+
+.app-details p,
+.app-details li{
+  text-align:justify;
+  text-justify:inter-word;
+  line-height:1.7;
+}
 /* HERO */
 .hero-banner {
   background: linear-gradient(135deg, #0077ff, #00c6ff);
@@ -361,7 +374,12 @@ body.dark a:hover{
   /* =========================
    MOBILE RESPONSIVE FIX
 ========================= */
-
+@media (max-width:768px){
+  .app-details p,
+  .app-details li{
+    text-align:left;
+  }
+}
 @media (max-width: 768px) {
 
   header {
